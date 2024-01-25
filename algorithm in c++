@@ -1,0 +1,21 @@
+
+int main() {
+    std::string sentence;
+    std::getline(std::cin, sentence);
+
+    int length = sentence.length();
+    int words = 1;
+    int vowels = 0;
+
+    for (char c : sentence) {
+        if (c == ' ') words++;
+        else if (std::tolower(c) == 'a' || std::tolower(c) == 'e' ||
+                 std::tolower(c) == 'i' || std::tolower(c) == 'o' || std::tolower(c) == 'u') vowels++;
+    }
+
+    std::cout << "Length: " << length << std::endl;
+    std::cout << "Words: " << words << std::endl;
+    std::cout << "Vowels: " << vowels << std::endl;
+
+    return 0;
+}
